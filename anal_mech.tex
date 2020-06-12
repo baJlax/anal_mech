@@ -16,18 +16,22 @@
 \usepackage{hyperref}
 \usepackage{pdfpages}
 \usepackage{dsfont}
+\usepackage{upgreek}
 
 \theoremstyle{definition}
 \newtheorem{defn}{Определение}[section]
 \newtheorem{example}{Пример}[section]
 \newtheorem{state}{Утверждение}[section]
 \newtheorem{theorem}{Теорема}[section]
+\newtheorem{axiom}{Аксиома}[section]
 
 \definecolor{linkcolor}{HTML}{0000FF}
 \definecolor{urlcolor}{HTML}{0000FF}
 \definecolor{faded}{gray}{0.6}
 
 \def\note{\textcolor{faded}}
+\def\rk{\text{rank}}
+\def\span{\text{span}}
 
 %---------------------------- defines for bold letters ----------------------------
 %                             ( use in mathmode only )
@@ -38,6 +42,11 @@
 \def\bfomega{\mathbf{\omega}}
 \def\bfv{\mathbf{v}}
 \def\bfrho{\mathbf{\rho}}
+\def\bfR{\mathbf{R}}
+\def\bfa{\mathbf{a}}
+\def\bfv{\mathbf{v}}
+
+\def\bfzero{\mathbf{0}}
 %----------------------------------------------------------------------------------
 
 \hypersetup{pdfstartview = FitH, linkcolor = linkcolor, urlcolor = urlcolor, colorlinks = true}
@@ -84,7 +93,7 @@
     \label{1}
     \hyperlink {first_lects.1}{Лекции}
     \begin{defn} (\hyperlink{first_lects.1}{Свободная механическая система})\\
-    {\it Свободная механическая система} -- $(m_i, \bfr_i)_{i=1}^N$,\ 
+    {\it Свободная механическая система} -- система $(m_i, \bfr_i)_{i=1}^N$,\ 
     $\bfr_i = (x_i, y_i, z_i)^T$, движущаяся под действием $\bfF = \left((\bfF_i^T)_{i=1}^N\right)^T
     = \bfF(t,\bfr,\bfrd)$, где $\bfr = \left((\bfr_i^T)_{i=1}^N\right)^T$.
     \end{defn}
@@ -94,6 +103,56 @@
     $M = \text{diag}(m_iE_3)_{i=1}^N$. Тогда $\forall t \in \mathbb{R}$:
     $$M\bfrdd(t) = \bfF|_{\bfr=\bfr(t), \bfrd = \bfrd(t)}.$$
     \end{theorem}
+    \begin{defn} (\hyperlink{first_lects.1}{Механическая система со связями})\\
+    {\it Механическая система со связями} -- система $(m_i, \bfr_i)_{i=1}^N$, движущаяся под
+    действием $\bfF$ с ограничениями на $\bfr$ и $\bfrd$.
+    \end{defn}
+    \begin{axiom} (\hyperlink{first_lects.1}{Освобождения от связей})\\
+    Пусть $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
+    связями. Тогда $\exists\  \bfR=\left((\bfR_i^T)_{i=1}^N\right)^T = \bfR(t,\bfr,\bfrd)$,
+    что из $M\bfrdd(t_0) = (\bfF + \bfR)|_{\bfr = \bfr(t), \bfrd=\bfrd(t)}|_{t=t_0}$
+    следует, что
+    $$\forall t \in \mathbb{R}\ \ \ M\bfrdd(t) = (\bfF + \bfR)|_{\bfr = \bfr(t), \bfrd=\bfrd(t)}.$$
+    $\bfR$ называется {\bf силами реакции связей}.
+    \end{axiom}
+    \noindent{\bf Уравнения связей.}\\
+    $\{(\bfr^T, \bfrd^T)^T\}$ -- {\it фазовое пространство.}\\
+    $\{(t, \bfr^T, \bfrd^T)^T\}$ -- {\it расширенное фазовое пространство.}\\
+    Будем считать, что $\forall (t_0, \bfr_0^T, \bfrd_0^T)^T \ \ \exists!$ решение
+    $M\bfrdd = \bfF + \bfR$:\\ $\bfr(t_0) = \bfr_0,\ \bfrd(t_0) = \bfrd_0$.\\
+    Далее будем рассматривать {\bf связи, линейные по $\bfrd$}.
+    $$
+    \boxed{
+    A\bfrd + \bfa = \bfzero},
+    $$
+    где $A=A(t,\bfr)\in\text{GL}(\mathbb{R}^k, \mathbb{R}^{3N}),\ \ \bfa=\bfa(t,\bfr)\in\mathbb{R}^k,\ \ \rk(A) = k < 3N$.\\
+    \note{(жирным нулем здесь и далее обозначается вектор из нулей)}\\
+    \noindent\hyperlink{first_lects.2}{Пример (низ страницы).}\\
+    $\bfr\in\mathbb{R}^{3N},\ \ \bfrd, \bfF, \bfR,... \in T_{\bfr}\mathbb{R}^{3N}$,
+    $N_{\bfr} = \span\{a_j\}_{j=1}^k$.
+    \begin{defn} (\hyperlink{first_lects.3}{Пространство виртуальных скоростей})\\
+    $L_{\bfr} = N_{\bfr}^T = \{\bfv\in\mathbb{R}^{3N}:\ A\bfv=\bfzero\} = \text{Ker}(A),$\\
+    $\dim N_{\bfr} = k$,\,\, $\dim L_{\bfr} = 3N-k$,\,\,  $T_{\bfr}\mathbb{R}^{3N} = N_{\bfr}\oplus L_{\bfr}$.
+    \end{defn}
+    \noindent\hyperlink{first_lects.3}{(его свойства тут)}
+    \begin{theorem} (\hyperlink{first_lects.3}{Принцип Даламбера-Лагранжа})\\
+    $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
+    связями $A\bfrd+\bfa=\bfzero$ $\Longleftrightarrow\,\,\,\forall t\in\mathbb{R}:\,$\\
+    $\left[ \forall\bfv\in\text{Ker}(A)|_{\bfr=\bfr(t)}:\ \ <M\bfrdd(t)-\bfF-\bfR_L,\bfv>
+    |_{\bfr=\bfr(t),\bfrd=\bfrd(t)} = 0,\,\,(A\bfrd+\bfa)|_{\bfr=\bfr(t),\bfrd=\bfrd(t)}=\bfzero \right]$.
+    \end{theorem}
+    \noindent$\square$ \hyperlink{first_lects.4}{ Доказательство. } $\blacksquare$
+    \begin{theorem} (\hyperlink{first_lects.5}{Уравнения Лагранжа первого рода})\\
+    $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
+    связями $A\bfrd+\bfa=\bfzero$ $\Longleftrightarrow\,\,\,\forall t\in\mathbb{R}:\,$\\
+    $\left[ \exists\,\uplambda=\uplambda(t):\ \ M\bfrdd(t)=(\bfF+\bfR_L+A^T\uplambda)|_{\bfr=\bfr(t),\bfrd=\bfrd(t)},\,\,(A\bfrd+\bfa)|_{\bfr=\bfr(t),\bfrd=\bfrd(t)}=\bfzero \right]$.
+    \end{theorem}
+    \noindent\note{(здесь $\uplambda$ -- вектор)}\\
+    \noindent$\square$ \hyperlink{first_lects.6}{ Доказательство. } $\blacksquare$
+    \begin{defn}
+    Связи называются {\it идеальными}, если $\bfR_L \equiv \bfzero$.
+    \end{defn}
+    \note{далее будем рассматривать их}
     
     \section{Понятие об интегрируемости связей. Критерий интегрируемости (критерий Фробениуса, без доказательства). Обобщенные координаты системы с интегрируемыми связями. Уравнения дифференциальных связей в обобщенных координатах. Признак неинтегрируемости уравнений связей.}
     \label{2}
