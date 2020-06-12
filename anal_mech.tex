@@ -43,10 +43,12 @@
 \def\bfv{\mathbf{v}}
 \def\bfrho{\mathbf{\rho}}
 \def\bfR{\mathbf{R}}
-\def\bfa{\mathbf{a}}
-\def\bfv{\mathbf{v}}
-
 \def\bfzero{\mathbf{0}}
+\def\bfq{\mathbf{q}}
+\def\bfQ{\mathbf{Q}}
+\def\bfa{\mathbf{a}}
+\def\bfx{\mathbf{x}}
+\def\bfX{\mathbf{X}}
 %----------------------------------------------------------------------------------
 
 \hypersetup{pdfstartview = FitH, linkcolor = linkcolor, urlcolor = urlcolor, colorlinks = true}
@@ -174,28 +176,57 @@
      \label{6}
     \hyperlink {first_lects.27}{Лекции} \\
     
-    \textbf{Терема (принцип Даламбера-Лагранжа для свободного тв.тела)}:\\
+    \begin{theorem} (Принцип Даламбера-Лагранжа для свободного тв.тела)
     $\bfr = \bfr(t) $ - движение тв.тела $(m_i, \bfr_i)^N_{i=1}$:\\
     $|\bfr_i - \bfr_j| = c_{ij} > 0$, $i < j = 1, ..., N$ под действием 
     $\bfF \Leftrightarrow \forall t \in R$  $\forall \bfv_c$, $\bfomega \in R^3$ $[|\bfr_i - \bfr_j| |_{ \bfr=\bfr(t)=c_{ij}}, i < j = 1,...,N;$  $<M\ddot{\bfr}(t) - \bfF, \bfv>$ $=0$, 
     где $\bfv = ((\bfv_c + ((\bfomega\times\bfrho_i)^T)^N_{i=1})^T]$
+    \end{theorem}    
     
     $\square$
     $\dot{\bfr} = \bfv_c + \bfomega\times\bfrho_i \Rightarrow \bfv = ((\bfv_c + ((\bfomega\times\bfrho_i)^T)^N_{i=1})^T$ - параметрическое задание $KerA$. $\blacksquare$\\
     
-    {\it Формулировка этой херни, которую я нашел в интернете звучит так:\\ Для системы с идеальными связями в любой момент времени сумма элементарных работ активных сил и даламберовых сил инерции равняется нулю. \\Я бы ей не доверял, но, т.к. сам не понимаю формулировку из лекций, думаю, что ляпнуть можно, если докопаются.}
+    \note{\it Формулировка этой херни, которую я нашел в интернете звучит так:\\ Для системы с идеальными связями в любой момент времени сумма элементарных работ активных сил и даламберовых сил инерции равняется нулю. \\Я бы ей не доверял, но, т.к. сам не понимаю формулировку из лекций, думаю, что ляпнуть можно, если докопаются.}
     
-    \hyperlink {first_lects.28}{Следствие}:\\
+     \begin{theorem} (\hyperlink {first_lects.28}{Следствие})
     $\bfr = \bfr(t)$ - движение твердого тела 
     $(m_i, bfr_i)^N_{i=1}$: $|\bfr_i - \bfr_j| = c_{ij} > 0$, $i<j = 1,...,N$ 
     под действием $\bfF$ $\Leftrightarrow$ $\forall t \in R [|\bfr_i - \bfr_j| |_{\bfr=\bfr(t)=c_{ij}}$,
      $i<j=1,...,N$, $m\ddot{\bfr}_c(t)=\sum\limits^N_{i=1} \bfF^{(e)}_i |_{\bfr=\bfr(t), \dot{\bfr}=\dot{\bfr}(t)}$,
       $\frac{d}{dt}K^{(relative)}_c|_{\bfr=\bfr(t), \dot{\bfr}=\dot{\bfr}(t)} = M^{(e)}_c |_{\bfr=\bfr(t), \dot{\bfr}=\dot{\bfr}(t)}]$
+      \end{theorem}
      
     
     \section{Уравнения Лагранжа второго рода. Калибровка. Преобразование уравнений при замене координат.}
      \label{7}
     \hyperlink {first_lects.29}{Лекции} \\
+    \begin{defn}(Уравнение Лагранжа второго рода
+		\begin{center}
+ 			\includegraphics[scale=0.5]{pics/lagranzh}
+		\end{center}
+	\end{defn}
+	
+	\hyperlink {first_lects.29}{Вывод, что они имеют второй порядок см.здесь} \\
+	
+	\textbf{Калибровка} - $L$ и $\widetilde{L}$ дают одинаковые уравнения Лагранжа второго рода:\\
+	$\frac{d}{dt}\frac{\partial L}{\partial \dot{\bfq}} - \frac{\partial L}{\partial \bfq} \Leftrightarrow \frac{d}{dt}\frac{\partial \widetilde{L}}{\partial \dot{\bfq}} - \frac{\partial \widetilde{L}}{\partial \bfq}$\\
+	Например, $\widetilde{L} = const L$ или $\widetilde{T} = const  T, \widetilde{Q} = const Q$\\
+	\note{\it Я понятия не имею, что происходит, но вроде вики говорит калибровка векторного потенциала — наложение дополнительных условий, позволяющих однозначно вычислить векторный потенциал электромагнитного поля для решения тех или иных физических задач.}\\
+	
+	\hyperlink {first_lects.30}{Пример какой-то калибровки} \\
+	
+	\begin{theorem}(\hyperlink {first_lects.31}{Теорема о преобразовании при замене к-т})\\
+	
+	\hyperlink {first_lects.31}{Начальные условия внизу страницы}\\
+	
+	$\bfx$ - другие локальные к-ты на $M_{const} (t)$\\
+	$\frac{d}{dt}[\frac{\partial T}{\partial \dot{\bfx}}|_{\dot{\bfr} = \dot{\bfr}(t, \bfx, \dot{\bfx})}]  -  \frac{\partial T}{\partial \bfx}|_{\dot{\bfr} = \dot{\bfr}(t, \bfx, \dot{\bfx})} = 
+	(\frac{d}{dt}[\frac{\partial T}{\partial \dot{\bfq}}|_{\dot{\bfr} = \dot{\bfr}(t, \bfq, \dot{\bfq})}]  -  \frac{\partial T}{\partial \bfq}|_{\dot{\bfr} = \dot{\bfr}(t, \bfq, \dot{\bfq})})|_{\bfq = \bfq(t, \bfx), \dot{\bfq} = \dot{\bfq} (t, \bfx, \dot{\bfx})} \frac{\partial \bfq}{\partial \bfx}$\\
+	$\bfX^T =  \bfQ^T |_{\bfq = \bfq(t, \bfx), \dot{\bfq} = \dot{\bfq} (t, \bfx, \dot{\bfx})} \frac{\partial \bfq}{\partial \bfx}$ 
+	\end{theorem}
+	
+	
+     
     
     \section{Первые интегралы уравнений Лагранжа для систем с потенциальными силами:    интеграл Якоби, интеграл энергии, циклические интегралы. Поле симметрий. Теорема Нетер.}
      \label{8}
