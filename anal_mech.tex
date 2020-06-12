@@ -35,20 +35,11 @@
 
 %---------------------------- defines for bold letters ----------------------------
 %                             ( use in mathmode only )
-\def\bfr{\mathbf{r}}
 \def\bfrd{\dot{\bfr}}
 \def\bfrdd{\ddot{\bfr}}
-\def\bfF{\mathbf{F}}
 \def\bfomega{\mathbf{\omega}}
-\def\bfv{\mathbf{v}}
 \def\bfrho{\mathbf{\rho}}
-\def\bfR{\mathbf{R}}
 \def\bfzero{\mathbf{0}}
-\def\bfq{\mathbf{q}}
-\def\bfQ{\mathbf{Q}}
-\def\bfa{\mathbf{a}}
-\def\bfx{\mathbf{x}}
-\def\bfX{\mathbf{X}}
 %----------------------------------------------------------------------------------
 
 \hypersetup{pdfstartview = FitH, linkcolor = linkcolor, urlcolor = urlcolor, colorlinks = true}
@@ -140,7 +131,7 @@
     \begin{theorem} (\hyperlink{first_lects.3}{Принцип Даламбера-Лагранжа})\\
     $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
     связями $A\bfrd+\bfa=\bfzero$ $\Longleftrightarrow\,\,\,\forall t\in\mathbb{R}:\,$\\
-    $\left[ \forall\bfv\in\text{Ker}(A)|_{\bfr=\bfr(t)}:\ \ <M\bfrdd(t)-\bfF-\bfR_L,\bfv>
+    $\left[ \forall\bfv\in\text{Ker}(A)|_{\bfr=\bfr(t)}:\ \langle M\bfrdd(t)-\bfF-\bfR_L,\bfv\rangle
     |_{\bfr=\bfr(t),\bfrd=\bfrd(t)} = 0,\,\,(A\bfrd+\bfa)|_{\bfr=\bfr(t),\bfrd=\bfrd(t)}=\bfzero \right]$.
     \end{theorem}
     \noindent$\square$ \hyperlink{first_lects.4}{ Доказательство. } $\blacksquare$
@@ -159,6 +150,14 @@
     \section{Понятие об интегрируемости связей. Критерий интегрируемости (критерий Фробениуса, без доказательства). Обобщенные координаты системы с интегрируемыми связями. Уравнения дифференциальных связей в обобщенных координатах. Признак неинтегрируемости уравнений связей.}
     \label{2}
 	\hyperlink {first_lects.7}{Лекции} \\
+	{\bfИнтегрируемые связи:} $A\bfrd+\bfa=\bfzero\,\Leftrightarrow\,\bff=\bfc.$\\
+	Система с интегрируемыми связями называется {\it голономной}.
+	\begin{theorem} (\hyperlink{first_lects.7}{Критерий Фробениуса, \note{б/д}})\\
+	Связь $A\bfrd+\bfa=\bfzero$ -- интегрируемая $\Longleftrightarrow$
+	$\forall\,\bfu_1,\bfu_2\in\mathbb{R}^{3N+1}$:\\ $(\langle\bfa_j,\delta\bfr\rangle+a^jdt)(\bfu_1) =
+	(\langle\bfa_j,\delta\bfr\rangle+a^jdt)(\bfu_2) = 0, j=\overline{1,k}$ влечет\\
+	$d(\langle\bfa_j,\delta\bfr\rangle+a^jdt)(\bfu_1,\bfu_2)=0, j=\overline{1,k}.$
+	\end{theorem}
 
 	\section{Принцип Даламбера – Лагранжа в обобщенных координатах. Уравнения Лагранжа второго рода для голономных систем. Обобщенные силы. Работа сил на перемещении вдоль координатной линии. Случай потенциальных сил. Уравнения Лагранжа со множителями в обобщенных координатах.}
 	 \label{3}
