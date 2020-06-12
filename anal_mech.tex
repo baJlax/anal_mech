@@ -23,6 +23,7 @@
 \newtheorem{example}{Пример}[section]
 \newtheorem{state}{Утверждение}[section]
 \newtheorem{theorem}{Теорема}[section]
+\newtheorem{lemma}{Лемма}[section]
 \newtheorem{axiom}{Аксиома}[section]
 
 \definecolor{linkcolor}{HTML}{0000FF}
@@ -32,6 +33,7 @@
 \def\note{\textcolor{faded}}
 \def\rk{\text{rank}}
 \def\span{\text{span}}
+\def\const{\text{const}}
 
 %---------------------------- defines for bold letters ----------------------------
 %                             ( use in mathmode only )
@@ -39,8 +41,15 @@
 
 \def\bfrd{\dot{\bfr}}
 \def\bfrdd{\ddot{\bfr}}
+\def\bfqd{\dot{\bfq}}
+\def\bfqdd{\ddot{\bfq}}
+
+\def\bfalpha{\upalpha}
+\def\bfbeta{\upbeta}
+\def\bfphi{\upphi}
 \def\bfomega{\mathbf{\omega}}
 \def\bfrho{\mathbf{\rho}}
+
 \def\bfzero{\mathbf{0}}
 %----------------------------------------------------------------------------------
 
@@ -160,6 +169,26 @@
 	(\langle\bfa_j,\delta\bfr\rangle+a^jdt)(\bfu_2) = 0, j=\overline{1,k}$ влечет\\
 	$d(\langle\bfa_j,\delta\bfr\rangle+a^jdt)(\bfu_1,\bfu_2)=0, j=\overline{1,k}.$
 	\end{theorem}
+	\noindent{\bf Обобщенные координаты системы с интегрируемыми связями.}\\
+	\note{тут надо подробнее!!!}\\
+	\hyperlink{first_lects.8}{Определение.} Иллюстрация:\\
+    \begin{center}
+    \includegraphics[scale=0.35]{pics/gen_coords}
+    \end{center}
+    \noindent{\bf Уравнение связей в обобщенных координатах:}
+    $$
+    \mathcal{A}\bfqd+\bfalpha = 0,\,\,\, \mathcal{A}\in\text{GL}(\mathbb{R}^{k_1},\mathbb{R}^n),\,\,\bfalpha\in\mathbb{R}^{k_1}
+    $$
+    \begin{lemma} 
+    $\rk(\mathcal{A}) = k_1$
+    \end{lemma}
+    \noindent$\square$ \hyperlink{first_lects.10}{ Доказательство. } $\blacksquare$
+    \begin{theorem} (\hyperlink{first_lects.10}{Признак неинтегрируемости связей})\\
+    Связь $\mathcal{A}\bfqd+\bfalpha$ -- интегрируемая $\Longleftrightarrow$
+    $\bfphi=\bfphi(t,q)=\const$.\\
+    $\bfphi(t_1,\bfq_1)\ne\bfphi(t_2,\bfq_2)\,\,\Rightarrow$ систему из $(t_1,\bfq_1)$ в
+    $(t_2,\bfq_2)$ нельзя перевести, не нарушая связи.
+    \end{theorem}
 
 	\section{Принцип Даламбера – Лагранжа в обобщенных координатах. Уравнения Лагранжа второго рода для голономных систем. Обобщенные силы. Работа сил на перемещении вдоль координатной линии. Случай потенциальных сил. Уравнения Лагранжа со множителями в обобщенных координатах.}
 	 \label{3}
