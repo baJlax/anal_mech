@@ -301,6 +301,46 @@
      \label{9}
     \hyperlink {lects.3}{Лекции} \\
     
+    \begin{defn} 
+    { \it Понижение порядка системы уравнений Лагранжа по Раусу} \---
+    	использование циклических интегралов\\
+    \end{defn}
+    
+    \begin{defn} 
+    { \it Функцией Рауса} системы с функцией Лагранжа $L=L(\dot{\bfq}, \widetilde{\bfq}, t)$ называется $R(\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc) = (L - \frac{\partial L^T}{\partial \dot{\overline{\bfq}}} \dot{\overline{\bfq}})_{*} - L|_{*} - \bfc^T\overline{\phi}(\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc)$, где (*) означает подстановку $\dot{\overline{\bfq}} = \overline{\phi} (\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc)$
+    \end{defn}
+    
+    \begin{theorem}(\hyperlink {lects.4}{Теорема Рауса})\\
+    Если $\overline{\bfq}$ - циклические координаты системы с функцией Лагранжа $L$ и $det \frac{\partial^2 L}{\partial \dot{\overline{\bfq}}^2} \neq 0$, то уравнения 
+    \begin{center}
+    $\frac{d}{dt} (\frac{\partial L}{\partial \dot{\bfq}}) - \frac{\partial L}{\partial \bfq} = 0$   (I)
+    \end{center}
+    эквивалентны системе уравнений
+    \begin{equation*}
+ 		\begin{cases}
+  			 \frac{d}{dt}(\frac{\partial R}{\partial \dot{\widetilde{\bfq}}}) - \frac{\partial R}{\partial \bfq} = 0,   (II)
+   				\\
+  			 \dot{\widetilde{\bfq}} = \overline{\phi} (\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc), \dot{\bfc} = 0  (III)
+  				
+		\end{cases}
+	\end{equation*}, где $R(\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc)$ \--- функция Рауса системы с функцией Лагранжа $L$.
+    \end{theorem}
+    
+    \begin{defn} 
+    (II) \--- { \it уравнения Рауса}\\
+    (II, III) \--- {\it приведенная система}\\
+    Переход от (I)  к (II,III) \--- {\it понижение порядка по Раусу (игнорирование циклических к-т)}
+    \end{defn}
+    
+    В задачах механики часто оказывается $R= R_2+R_1+R_0$, где смысл индексов тот же, что и в типичной ф-ии Лагранжа, только по отношению к $\dot{\widetilde{\bfq}}$
+    
+      \begin{defn} 
+    Функция $V_\bfc = -R_0$ \--- называется {\it приведенным потенциалом}
+    \end{defn}
+    
+    \noindent\hyperlink {lects.5}{Пример}\\
+    
+    
     \section{Задача Лагранжа о вращении тяжелого твердого тела вокруг неподвижной точки. Типичное движение оси динамической симметрии. Псевдорегулярная и регулярная прецессии. Способы реализации движений этих типов с заданным углом нутации.}
      \label{10}
     \hyperlink {lects.6}{Лекции} \\
