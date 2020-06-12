@@ -35,6 +35,9 @@
 \def\bfrd{\dot{\bfr}}
 \def\bfrdd{\ddot{\bfr}}
 \def\bfF{\mathbf{F}}
+\def\bfomega{\mathbf{\omega}}
+\def\bfv{\mathbf{v}}
+\def\bfrho{\mathbf{\rho}}
 %----------------------------------------------------------------------------------
 
 \hypersetup{pdfstartview = FitH, linkcolor = linkcolor, urlcolor = urlcolor, colorlinks = true}
@@ -111,6 +114,25 @@
     \section{Эквивалентность принципа Даламбера – Лагранжа и уравнений движения свободного твердого тела.}
      \label{6}
     \hyperlink {first_lects.27}{Лекции} \\
+    
+    \textbf{Терема (принцип Даламбера-Лагранжа для свободного тв.тела)}:\\
+    $\bfr = \bfr(t) $ - движение тв.тела $(m_i, \bfr_i)^N_{i=1}$:\\
+    $|\bfr_i - \bfr_j| = c_{ij} > 0$, $i < j = 1, ..., N$ под действием 
+    $\bfF \Leftrightarrow \forall t \in R$  $\forall \bfv_c$, $\bfomega \in R^3$ $[|\bfr_i - \bfr_j| |_{ \bfr=\bfr(t)=c_{ij}}, i < j = 1,...,N;$  $<M\ddot{\bfr}(t) - \bfF, \bfv>$ $=0$, 
+    где $\bfv = ((\bfv_c + ((\bfomega\times\bfrho_i)^T)^N_{i=1})^T]$
+    
+    $\square$
+    $\dot{\bfr} = \bfv_c + \bfomega\times\bfrho_i \Rightarrow \bfv = ((\bfv_c + ((\bfomega\times\bfrho_i)^T)^N_{i=1})^T$ - параметрическое задание $KerA$. $\blacksquare$\\
+    
+    {\it Формулировка этой херни, которую я нашел в интернете звучит так:\\ Для системы с идеальными связями в любой момент времени сумма элементарных работ активных сил и даламберовых сил инерции равняется нулю. \\Я бы ей не доверял, но, т.к. сам не понимаю формулировку из лекций, думаю, что ляпнуть можно, если докопаются.}
+    
+    \hyperlink {first_lects.28}{Следствие}:\\
+    $\bfr = \bfr(t)$ - движение твердого тела 
+    $(m_i, bfr_i)^N_{i=1}$: $|\bfr_i - \bfr_j| = c_{ij} > 0$, $i<j = 1,...,N$ 
+    под действием $\bfF$ $\Leftrightarrow$ $\forall t \in R [|\bfr_i - \bfr_j| |_{\bfr=\bfr(t)=c_{ij}}$,
+     $i<j=1,...,N$, $m\ddot{\bfr}_c(t)=\sum\limits^N_{i=1} \bfF^{(e)}_i |_{\bfr=\bfr(t), \dot{\bfr}=\dot{\bfr}(t)}$,
+      $\frac{d}{dt}K^{(relative)}_c|_{\bfr=\bfr(t), \dot{\bfr}=\dot{\bfr}(t)} = M^{(e)}_c |_{\bfr=\bfr(t), \dot{\bfr}=\dot{\bfr}(t)}]$
+     
     
     \section{Уравнения Лагранжа второго рода. Калибровка. Преобразование уравнений при замене координат.}
      \label{7}
