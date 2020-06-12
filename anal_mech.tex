@@ -236,18 +236,18 @@
 		\end{center}
 	\end{defn}
 	
-	\hyperlink {first_lects.29}{Вывод, что они имеют второй порядок см.здесь} \\
+	\noindent\hyperlink {first_lects.29}{Вывод, что они имеют второй порядок см.здесь} \\
 	
 	\textbf{Калибровка} - $L$ и $\widetilde{L}$ дают одинаковые уравнения Лагранжа второго рода:\\
 	$\frac{d}{dt}\frac{\partial L}{\partial \dot{\bfq}} - \frac{\partial L}{\partial \bfq} \Leftrightarrow \frac{d}{dt}\frac{\partial \widetilde{L}}{\partial \dot{\bfq}} - \frac{\partial \widetilde{L}}{\partial \bfq}$\\
 	Например, $\widetilde{L} = const L$ или $\widetilde{T} = const  T, \widetilde{Q} = const Q$\\
 	\note{\it Я понятия не имею, что происходит, но вроде вики говорит калибровка векторного потенциала — наложение дополнительных условий, позволяющих однозначно вычислить векторный потенциал электромагнитного поля для решения тех или иных физических задач.}\\
 	
-	\hyperlink {first_lects.30}{Пример какой-то калибровки} \\
+	\noindent\hyperlink {first_lects.30}{Пример какой-то калибровки} \\
 	
 	\begin{theorem}(\hyperlink {first_lects.31}{Теорема о преобразовании при замене к-т})\\
 	
-	\hyperlink {first_lects.31}{Начальные условия внизу страницы}\\
+	\noindent\hyperlink {first_lects.31}{Начальные условия внизу страницы}\\
 	
 	$\bfx$ - другие локальные к-ты на $M_{const} (t)$\\
 	$\frac{d}{dt}[\frac{\partial T}{\partial \dot{\bfx}}|_{\dot{\bfr} = \dot{\bfr}(t, \bfx, \dot{\bfx})}]  -  \frac{\partial T}{\partial \bfx}|_{\dot{\bfr} = \dot{\bfr}(t, \bfx, \dot{\bfx})} = 
@@ -264,6 +264,38 @@
     \begin{defn}
 	Первым интегралом системы $\frac{d}{dt}\frac{\partial L}{\partial \dot{\bfq}} - \frac{\partial L}{\partial \bfq} = 0$ называется функция $f(\dot{\bfq}, \bfq, t)$, которая оказывается константой на любом решении этой системы.   
     \end{defn}
+    
+    \textbf{Простейшие первые интегралы уравнений Лагранжа}:
+    \begin{itemize}
+    \item[1] $\bfq = (\overline{\bfq}^T, \widetilde{\bfq}^T)^T$, $\frac{\partial L}{\partial \overline{\bfq}} \Leftrightarrow L=(t, \widetilde{\bfq}, \dot{\bfq}) \Rightarrow \frac{\partial L}{\partial \dot{\overline{\bfq}}}$ - циклические интегралы
+    \item[2] Если $\frac{\partial L}{\partial t}$, то $H(\dot{\bfq}, \bfq, t) = \frac{\partial L^T}{\partial \dot{\bfq}} \dot{\bfq} - L = const$
+    \item \hyperlink {lects.1}{Подробности} 
+    \end{itemize}
+    
+    \begin{theorem}(Замечание)\\
+   		Для уравнений механики $L = T_2+T_1+T_0-V=L_2+L_1+L_0$
+    \end{theorem}
+    \begin{defn} (\hyperlink {lects.1}{Интеграл Якоби})\\
+    	$H=T_2-T_0+V=L_2-L_0=const$ 
+    \end{defn}
+    \begin{defn} (Интеграл энергии)\\
+    	Это интеграл Якоби при $T \equiv T_2$: $H=T+V=h=const$\\
+    \end{defn}
+    
+    \noindent\hyperlink {lects.1}{Примеры в конце страницы}\\
+    
+    \begin{defn}
+    	Вектор $\bfv(\bfq) \in R^n$ называется полем симметрий системы с функцией Лагранжа $L=L(\dot{\bfq}, \bfq, t)$, если на любом решении $\bfq(\tau), \dot{\bfq}(\tau)$ системы $\{\bfq' = \bfv(\bfq), (\dot{\bfq})'=\frac{\partial \bfv}{\partial \bfq} \dot{\bfq}\}$ для любого $t$ :\\
+    	\begin{center}
+    	$\frac{d}{d\tau} L (\dot{\bfq}(\tau), \bfq(\tau), t) \equiv 0$
+    	\end{center}
+    \end{defn}
+    
+    \begin{theorem}(\hyperlink {lects.2}{Нётер})\\
+    Если $\bfv(\bfq)$ поле симметрий системы с функций Лагранжа $L(\dot{\bfq}, \bfq, t)$, то уравнения Лагранжа имеют первый интеграл $I=\frac{\partial L^T}{\partial \dot{\bfq}} \bfv(\bfq) = const$
+    \end{theorem}
+    
+    
     
     \section{Понижение порядка уравнений Лагранжа по Раусу. Функция Рауса. Приведенный потенциал. Уравнения Рауса.}
      \label{9}
