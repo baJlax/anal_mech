@@ -34,6 +34,7 @@
 \def\rk{\text{rank}}
 \def\span{\text{span}}
 \def\const{\text{const}}
+\def\Ker{\text{Ker}}
 
 %---------------------------- defines for bold letters ----------------------------
 %                             ( use in mathmode only )
@@ -192,8 +193,57 @@
 
 	\section{Принцип Даламбера – Лагранжа в обобщенных координатах. Уравнения Лагранжа второго рода для голономных систем. Обобщенные силы. Работа сил на перемещении вдоль координатной линии. Случай потенциальных сил. Уравнения Лагранжа со множителями в обобщенных координатах.}
 	 \label{3}
-	\hyperlink {first_lects.14}{Лекции} \\
-	
+	\hyperlink {first_lects.14}{Лекции}\\
+	$M_{\const}(t) = \{g = \const\} \subset \mathbb{R}^{3N}$ -- гладкое многообразие, заданное локально.
+    \begin{theorem} (\hyperlink{first_lects.14}{Принцип Даламбера-Лагранжа в обобщенных коорд.})\\
+    $\bfq=\bfq(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ по
+    $M_{\const}(t)$ со связями $\mathcal{A}\bfqd+\bfalpha=\bfzero\,\,$
+    $\Longleftrightarrow$\\ $\forall t\in\mathbb{R}:\,$
+    $\forall \bfu\in \Ker(\mathcal{A})|_{\bfq=\bfq(t)}:$
+    $$
+    \begin{cases}
+    \left\langle(M\frac{d}{dt}\bfrd-\bfF)^T|_{\bfr=\bfr(r,\bfq),\bfrd=\bfrd(t,\bfq,\bfqd)}\,, \frac{\partial\bfr}{\partial\bfq}|_{\bfq=\bfq(t),\bfqd=\bfqd(t),\bfqdd=\bfqdd(t)}\bfu\right\rangle = 0, \\
+    (\mathcal{A}\bfqd+\bfalpha)|_{\bfq=\bfq(t),\bfqd=\bfqd(t)} = \bfzero.\\
+    \end{cases}
+    $$
+    \end{theorem}
+    \begin{defn}
+    {\it Обобщенная сила} -- $\bfQ^T = \bfF^T|_{\bfr=\bfr(t,\bfq),\bfrd=\bfrd(t,\bfq,\bfqd)}\cdot\frac{\partial\bfr}{\partial\bfq}$.
+    \end{defn}
+    \begin{example} \hyperlink{first_lects.15}{Работа сил на перемещении вдоль координатной линии (начало страницы)}
+    \end{example}
+    \noindent{\bf Уравнения Лагранжа 2 рода для голономных систем.}
+    \begin{defn} (\hyperlink{first_lects.15}{Уравнения Лагранжа 2 рода})
+    $$
+    \begin{aligned}
+    T = \frac{1}{2}\left\langle M\bfrd,\bfrd\right\rangle = T(\bfrd),\,\,
+    \frac{\partial T}{\partial\bfrd} = \bfrd^T M\\
+    \frac{d}{dt}(\bfr(t,\bfq))=\frac{\partial\bfr}{\partial t} + \frac{\partial\bfr}{\partial\bfq}\bfqd = \bfrd(t,\bfq,\bfqd)
+    \end{aligned}
+    $$
+    \end{defn}
+    \noindent\hyperlink{first_lects.16}{\bf Принцип Даламбера-Лагранжа в обобщенных координатах (другая запись)}
+    \begin{example} \hyperlink{first_lects.16}{Уравнения Лагранжа 2 рода для голономных систем}\\
+    $k_1 = 0$ -- голономная система.$\forall t\in\mathbb{R}$:\\
+    $$\left(\frac{d}{dt}\left(\frac{\partial T}{\partial\bfqd}\bigg|_{\bfrd=\bfrd(t,\bfq,\bfqd)}\right) - \frac{\partial T}{\partial\bfq}\bigg|_{\bfrd=\bfrd(t,\bfq,\bfqd)}\right)\bigg|_{\bfq=\bfq(t),\bfqd=\bfqd(t),\bfqdd=\bfqdd(t)} = \bfQ^T|_{\bfq=\bfq(t),\bfqd=\bfqd(t)}$$
+    \end{example}
+    \noindent{\bf Случай потенциальных сил.}\\
+    \noindent\hyperlink{first_lects.17}{\bf Какой-то пример \note{(видимо важный)}}\\
+    {\bf Уравнения Эйлера-Лагранжа:} $$\frac{d}{dt}\frac{\partial L}{\partial\bfqd} - \frac{\partial L}{\partial\bfq} = \bfzero^T$$
+    \begin{theorem} (\hyperlink{first_lects.17}{ур-я Лагранжа с множителями в обобщенных коорд.})\\
+    $\bfq=\bfq(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ по
+    $M_{\const}(t)$ со связями $\mathcal{A}\bfqd+\bfalpha=\bfzero\,\,$
+    $\Longleftrightarrow$\\ $\forall t\in\mathbb{R}:\,\exists\,\uplambda=\uplambda(t):$
+    $$
+    \begin{cases}
+    \left(\frac{d}{dt}\frac{\partial T}{\partial\bfqd}\big|_{\bfrd=\bfrd(t,\bfq,\bfqd)} - \frac{\partial T}{\partial\bfq}\big|_{\bfrd=\bfrd(t,\bfq,\bfqd)} - \bfQ^T\right)\bigg|_{\bfq=\bfq(t),\bfqd=\bfqd(t),\bfqdd=\bfqdd(t)} = \uplambda^T\mathcal{A}|_{\bfq=\bfq(t)}\\
+    (\mathcal{A}\bfqd+\bfalpha)|_{\bfq=\bfq(t),\bfqd=\bfqd(t)} = \bfzero\\
+    \end{cases}
+    $$
+    \end{theorem}
+    \begin{example}\hyperlink{first_lects.17}{Задача Жуковского (внизу страницы)}
+    \end{example}
+    
     \section{Энергия ускорений. Псевдоскорости. Уравнения Аппеля.}
      \label{4}
    	\hyperlink {first_lects.19}{Лекции} \\
