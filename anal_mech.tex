@@ -452,25 +452,239 @@
      \label{15}
     \hyperlink {lects.18}{Лекции} \\
     
-    \section{Канонические преобразования. Определение, его переформулировка в терминах скобок Пуассона, интерпретация в случае системы с одной степенью свободы. Примеры: тождественное, обратное к каноническому, ортогональное преобразование фазовой плоскости, полярные канонические координаты, каноническая перестановка, каноническое изменение масштабов на координатных осях.}
+ \section{Канонические преобразования. Определение, его переформулировка в терминах скобок Пуассона, интерпретация в случае системы с одной степенью свободы. Примеры: тождественное, обратное к каноническому, ортогональное преобразование фазовой плоскости, полярные канонические координаты, каноническая перестановка, каноническое изменение масштабов на координатных осях.}
      \label{16}
     \hyperlink {lects.23}{Лекции} \\
-    
-    \section{Критерии каноничности преобразования.}
+    Произвольная замена неизвестных ведет к разрушает какноническую форму.
+    Существует класс преобразований координат в фазовом пространстве, которые сохраняют каноническую форму уравнений Гамильтона. Рассмотрим подмножество - унивалентные канонические преобразования. Называем их каноническими.\\
+Воспользуемся обозначением $z = 
+\left (
+\begin{matrix}
+\mathbf{q} \\ \mathbf{p}
+\end{matrix}
+\right )
+$ для исходных канон. уравнений.\\
+$
+\left \lbrace
+\begin{matrix}
+\dot{\mathbf{q}} &= \frac{\partial H}{\partial \mathbf{p}}\\
+\dot{\mathbf{p}} &= -\frac{\partial H}{\partial \mathbf{q}}
+\end{matrix}
+\right.
+$, $H(\mathbf{p}, \mathbf{q}, t) = H(\mathbf{z}, t)$, запишем через $\dot{\mathbf z} = I \frac{\partial H}{\partial \mathbf z}$, где $I = 
+\left (
+\begin{matrix}
+0&1\\-1&0
+\end{matrix}
+\right )$\\
+Пусть $\mathbf{\zeta} = 
+\left (
+\begin{matrix}
+\mathbf{Q}\\\mathbf{P}
+\end{matrix}
+\right )
+$ - новые координаты, $
+\left \lbrace
+\begin{matrix}
+\mathbf{Q} &= \mathbf{Q}(\mathbf{q}, \mathbf{p}, t)\\
+\mathbf{P} &= \mathbf{P}(\mathbf{q}, \mathbf{p}, t) 
+\end{matrix}
+\right .
+, 
+\left .
+\begin{matrix}
+\mathbf{\zeta} = \mathbf{\zeta}(\mathbf{z}, t)\\
+J = \frac{\partial \mathbf{\zeta}}{\partial \mathbf{z}} , \det J \neq 0
+\end{matrix}
+\right .
+(3)$\\
+\begin{defn} Преобр. (3) наз. каноническим, если $\mathcal{P} = JIJ^\top \equiv I$ \end{defn}
+\begin{state} Матрица $\mathcal{P}$ состоит из скобок Пуассона функций, задающих преобразование.\end{state} 
+$J = 
+\left (
+\begin{matrix}
+\mathbf{Q}_\mathbf{q}&\mathbf{Q}_\mathbf{p}\\
+\mathbf{P}_\mathbf{q}&\mathbf{P}_\mathbf{p}
+\end{matrix}
+\right )
+,\mathbf{Q}_\mathbf{q} = \frac{\partial \mathbf{Q}}{\partial \mathbf{q}},\dots$, то $\mathcal{P} =
+\left (
+\begin{matrix}
+\mathbf{Q}_\mathbf{q}\mathbf{Q}_\mathbf{p}^\top - \mathbf{Q}_\mathbf{p}\mathbf{Q}_\mathbf{q}^\top
+&
+\mathbf{Q}_\mathbf{q}\mathbf{P}_\mathbf{p}^\top - \mathbf{Q}_\mathbf{p}\mathbf{P}_\mathbf{q}^\top\\
+\mathbf{P}_\mathbf{q}\mathbf{Q}_\mathbf{p}^\top - \mathbf{P}_\mathbf{p}\mathbf{Q}_\mathbf{q}^\top
+&
+\mathbf{P}_\mathbf{q}\mathbf{P}_\mathbf{p}^\top - \mathbf{P}_\mathbf{p}\mathbf{P}_\mathbf{p}^\top\\
+\end{matrix}
+\right )
+$\\
+$(\mathbf{Q}_\mathbf{q}\mathbf{Q}_\mathbf{p}^\top - \mathbf{Q}_\mathbf{p}\mathbf{Q}_\mathbf{q}^\top)_{ij}= \sum_k(\frac{\partial Q_i}{\partial q_k}*\frac{\partial Q_j}{\partial p_k} - \frac{\partial Q_i}{\partial p_k}*\frac{\partial Q_j}{\partial q_k}) \Rightarrow \mathcal{P} =
+\left (
+\begin{matrix}
+\{Q_i,Q_j\}&\{Q_i,P_j\}\\
+\{P_i,Q_j\}&\{P_i,P_j\}
+\end{matrix}
+\right )
+$\\
+Критерий каноничности преобразования (3) в виде :
+$$
+\{Q_i,Q_j\} \equiv 0, \{P_i,P_j\} \equiv 0, \{P_i,P_j\} \equiv \delta_{ij}, i,j = 1,\dots,n; \delta_{ij} = 
+\left \{
+\begin{matrix}
+0, i\neq j\\1, i = j
+\end{matrix}
+\right .(6)
+$$
+\emph{Следствие.}В случае $n = 1$ от уловий (6) остаётся только $\{Q,P\} \equiv 1$ или $\frac{\partial Q}{\partial q}*\frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p}*\frac{\partial P}{\partial q} \equiv 1$, что означает $\det J \equiv 1$\\
+\hyperlink {lects.24}{Примеры канонческих преобразований} \\
+
+ \section{Критерии каноничности преобразования.}
      \label{17}
-    \hyperlink {lects.25}{Лекции} \\
-    
+    \hyperlink {lects.25}{Лекции}
+\begin{state}
+Если каноническое преобразование не зависит от времени, то уранение Гамильтона в новых координатах имеют каноническую форму с той же функцией Гамильтона, только выраженной через новые координаты. \hyperlink {lects.25}{Доказательство} второй абзац
+\end{state}
+\emph{Замечание} Из (3)(в Док-ве) следует возможность простого обобщения определения канонического преобразования: $JIJ^\top \equiv CI$, где C = const. С называется валентностью канон. преобр. (Считаем C = 1)\\
+Сами критерии :\\
+Пусть формулы преобразования имеют вид :\\ $\mathbf{\zeta}$ - координаты, $\mathbf{\zeta_0}$ - функции, $\mathbf{\zeta} = \mathbf{\zeta_0}(\mathbf{z},t),
+\left \lbrace
+\begin{matrix}
+\mathbf{Q} &= \mathbf{Q_0}(\mathbf{q}, \mathbf{p}, t)\\
+\mathbf{P} &= \mathbf{P_0}(\mathbf{q}, \mathbf{p}, t) 
+\end{matrix}
+\right .
+, 
+J = \frac{\partial \mathbf{\zeta_0}}{\partial \mathbf{z}} (4)$\\
+\begin{enumerate}
+\item {Преобразование (4) каноническое тогда и только тогда, \\когда $J^\top IJ \equiv I$. \hyperlink {lects.25}{Док-во в конце страницы}}
+\item {Преобразование (4) каноническое тогда и только тогда, когда тождественно равна нулю 2-форма $\sum dp_i \wedge dq_i - \sum \delta P_{\ddot a} \wedge \delta Q_{\ddot a} \equiv 0$ или $d\mathbf{p} \wedge d \mathbf{q} - \delta \mathbf{P}_0^\top\wedge \delta \mathbf{Q}_0 \equiv 0$ (7).\\
+Можно выразить $\delta \mathbf{P}_0^\top\wedge \delta \mathbf{Q}_0 \equiv -\frac{1}{2}\delta \mathbf{\zeta_0}^\top \wedge \delta\mathbf{\zeta_0}$. \hyperlink {lects.26}{Док-во в начале}}\\
+\emph{Лемма Пуанкаре} Для 1-формы $\omega$ тождество $\delta \omega \equiv 0$ верно тогда и только тогда, когда существует такая функция $f(\mathbf{z}, t)$, что $\omega \equiv \delta f$.
+\item -//-, если существует такая функция $\Pi(\mathbf{z}, t)$, что\\ $\mathbf{p} \wedge d \mathbf{q} - \mathbf{P}_0^\top\wedge \delta \mathbf{Q}_0 \equiv \delta \Pi(\mathbf{z}, t)$\hyperlink {lects.27}{Док-во в начале}
+\end{enumerate}
     \section{Преобразование уравнений Гамильтона при канонических преобразованиях.}
      \label{18}
     \hyperlink {lects.27}{Лекции} \\
-    
+\emph{Лемма} Уравнение Гамильтона $\left.
+\begin{matrix}
+\dot{\mathbf{q}} &= \frac{\partial H}{\partial \mathbf{p}}\\
+\dot{\mathbf{p}} &= -\frac{\partial H}{\partial \mathbf{q}}
+\end{matrix}
+\right.
+$- это уравнение Лагранжа в координатах $z = 
+\left (
+\begin{matrix}
+\mathbf{q} \\ \mathbf{p}
+\end{matrix}
+\right )
+$ с функцией Лагранжа $\mathcal{L}(\dot{\mathbf{z}},\mathbf{z}, t) = \mathbf{p}^\top \dot{\mathbf{q}} - H(\mathbf{q},\mathbf{p}, t).(9)$ \hyperlink {lects.27}{Док-во в конце}
+
     \section{Производящие функции канонических преобразований (свободного и стандартного). Выражение новой функции Гамильтона через производящие функции в этих случаях. Производящие функции для преобразований: тождественного, перехода к полярным каноническим координатам, канонической перестановки, канонического изменения масштабов на координатных осях.}
      \label{19}
     \hyperlink {lects.28}{Лекции (низ страницы)} \\
-    
-    \section{Уравнения для производящих функций целенаправленных канонических преобразований. Уравнение Гамильтона – Якоби, его полный интеграл. Теорема Якоби. Нахождение полного интеграла в случаях независимости функции Гамильтона от времени, наличия циклических координат, отделения переменных.}
+Рассмотрим только два случая :\\
+Свободное каноническое преобразование : пусть в формулах (4) канонического преобразования $\det (\frac{\partial \mathbf{Q_0}}{\partial \mathbf{p}}) \neq 0$.     
+\hyperlink {lects.29}{Формулы и преобразования в начале} \\
+Стандартное каноническое преобразование : пусть в формулах (4) канонического преобразования $\det (\frac{\partial \mathbf{ P_0}}{\partial \mathbf{p}}) \neq 0$.     
+\hyperlink {lects.29}{Ф-лы и преобр-ния в конце} \\
+\textit{Выражение новой ф-ии Гамильтона через производящую ф-ию}\\
+Используем функцию Лагранжа(9). Переходим к координатам $(\mathbf{q},\mathbf{Q})$.
+\hyperlink {lects.30}{Все преобразования на этой странице} \\
+\textit{Замечания о канонических преобразованиях с производящей ф-ей}\\
+1) Любое каноническое преобразование имеет производящую функцию.\\
+\hyperlink {lects.30}{Все примеры в начале страницы} \\
+2) Если $\bar{S}(\mathbf{q},\mathbf{Q}, t)$ - функция от $\mathbf{q} \in \mathbb{R}^n, \mathbf{Q} \in \mathbb{R}^n, t; \det \frac{\partial^2 \bar{S}}{\partial \mathbf{Q} \partial \mathbf{q}} \neq 0$, то формулы $\left \{
+\begin{matrix}
+\mathbf{p}&= \frac{\partial \bar S}{\partial \mathbf{q}}\\
+\mathbf{P} &= -\frac{\partial \bar S}{\partial \mathbf{Q}}
+\end{matrix}
+\right .$ задают каноническое преобразование $\left (
+\begin{matrix}
+\mathbf{q}\\ \mathbf{p}
+\end{matrix}
+\right ) \rightarrow \left (
+\begin{matrix}
+\mathbf{Q}\\ \mathbf{P}
+\end{matrix}
+\right )$\\
+Аналогично, если $\tilde{S}(\mathbf{q},\mathbf{P}, t)$ такова, что $\det \frac{\partial^2 \tilde{S}}{\partial \mathbf{P} \partial \mathbf{q}} \neq 0$, то формулы $\left \{
+\begin{matrix}
+\mathbf{p}&= \frac{\partial \tilde S}{\partial \mathbf{q}}\\
+\mathbf{Q} &= \frac{\partial \tilde S}{\partial \mathbf{P}}
+\end{matrix}
+\right .$ задают каноническое преобразование $\left (
+\begin{matrix}
+\mathbf{q}\\ \mathbf{p}
+\end{matrix}
+\right ) \rightarrow \left (
+\begin{matrix}
+\mathbf{Q}\\ \mathbf{P}
+\end{matrix}
+\right )$ \hyperlink {lects.31}{Док-ва в конце} \\
+ \section{Уравнения для производящих функций целенаправленных канонических преобразований. Уравнение Гамильтона – Якоби, его полный интеграл. Теорема Якоби. Нахождение полного интеграла в случаях независимости функции Гамильтона от времени, наличия циклических координат, отделения переменных.}
      \label{20}
-    \hyperlink {lects.31}{Лекции} \\
+    \hyperlink {lects.32}{Лекции} \\
+    Пусть требуется найти каноническое преобразование $\left (
+\begin{matrix}
+\mathbf{q}\\ \mathbf{p}
+\end{matrix}
+\right ) \rightarrow \left (
+\begin{matrix}
+\mathbf{Q}\\ \mathbf{P}
+\end{matrix}
+\right )$, что функция, имеющая в координатах $(\mathbf{q}, \mathbf{p})$ формулу $f(\mathbf{q}, \mathbf{p}, t)$, приобретает в коорлинатах $(\mathbf{Q}, \mathbf{P})$ формулу $g(\mathbf{Q}, \mathbf{P}, t)$. Ищем производящую функцию вида $\tilde{S}(\mathbf{q},\mathbf{P}, t)$, $\det \frac{\partial^2 \tilde{S}}{\partial \mathbf{q} \partial \mathbf{P}} \neq 0$, как решение дифференциального уравнения в частных производных : $f(\mathbf{q}, \frac{\partial \tilde{S}}{\partial \mathbf{q}}, t) = g(\frac{\partial \tilde{S}}{\partial \mathbf{P}}, \mathbf{P}, t).$\\
+Если $S_0(\mathbf{q},\mathbf{P}, t)$ - одна из таких функций, то формулы $\left \{
+\begin{matrix}
+\mathbf{p}&= \frac{\partial \tilde S_0}{\partial \mathbf{q}}\\
+\mathbf{Q} &= \frac{\partial \tilde S_0}{\partial \mathbf{P}}
+\end{matrix}
+\right .$ задают каноническое преобразование $\left \lbrace
+\begin{matrix}
+\mathbf{Q} &= \mathbf{Q_0}(\mathbf{q}, \mathbf{p}, t)\\
+\mathbf{P} &= \mathbf{P_0}(\mathbf{q}, \mathbf{p}, t) 
+\end{matrix}
+\right .$, причем тождество $f(\mathbf{q}, \frac{\partial \tilde{S_0}}{\partial \mathbf{q}}, t) = g(\frac{\partial \tilde{S_0}}{\partial \mathbf{P}}, \mathbf{P}, t).$ в координатах $(\mathbf{q}, \mathbf{p})$ примет вид \\
+$f(\mathbf{q}, \mathbf{p}, t) \equiv g( \mathbf{Q_0}(\mathbf{q}, \mathbf{p}, t),  \mathbf{P_0}(\mathbf{q}, \mathbf{p}, t), t).$\\
+Для функции $\bar{S}(\mathbf{q},\mathbf{P}, t)$, $\det \frac{\partial^2 \bar{S}}{\partial \mathbf{q} \partial \mathbf{P}} \neq 0$, достаточно найти такое решение уравнения $f(\mathbf{q}, \frac{\partial \bar{S}}{\partial \mathbf{q}}, t) = g( \mathbf{Q},-\frac{\partial \bar{S}}{\partial \mathbf{Q}}, t).$\\
+\textit{Преобразование функции Гамильтона}\\
+Если каноническое преобразование $\left (
+\begin{matrix}
+\mathbf{q}\\ \mathbf{p}
+\end{matrix}
+\right ) \rightarrow \left (
+\begin{matrix}
+\mathbf{Q}\\ \mathbf{P}
+\end{matrix}
+\right )$ не зависит от времени, то новая ф-ия Гамильтона $\mathcal{H}(\mathbf{Q}, \mathbf{P}, t)$ получается из старой$H(\mathbf{q}, \mathbf{p}, t)$ подстановкой формул замены. Для достижения цели $H(\mathbf{q}, \mathbf{p}, t)\rightarrow\mathcal{H}(\mathbf{Q}, \mathbf{P}, t)$ достаточно найти не зависящее от времени решение уравнения \\
+$H(\mathbf{q}, \frac{\partial S}{\partial \mathbf{q}}, t) = \mathcal{H}(\frac{\partial S}{\partial \mathbf{P}}, \mathbf{P}, t)$, удовлетворяюее условию невырожденности\\
+$\det \frac{\partial^2 S}{\partial \mathbf{q} \partial \mathbf{P}} \neq 0$ и использовать формулы $\mathbf{p} = \frac{\partial S}{\partial \mathbf{q}}$,$
+\mathbf{Q} = \frac{\partial S}{\partial \mathbf{P}}.$\\
+При использовании преобразований, зависящих от времени и имеющих производящую функцию $S(\mathbf{q},\mathbf{P}, t)$, новая ф-ия Гамильтона $\mathcal{H}(\mathbf{Q}, \mathbf{P}, t)$ получаетс из старой $H(\mathbf{q}, \mathbf{p}, t)$ по формуле\\
+ $\mathcal{H}(\mathbf{Q}, \mathbf{P}, t) = (H(\mathbf{q},\frac{\partial S}{\partial \mathbf{q}}, t) + \frac{\partial S}{\partial t})|_{(\mathbf{Q}, \mathbf{P})} (4)$\\
+Поэтому для достижения нужной цели $H(\mathbf{q}, \mathbf{p}, t)\rightarrow\mathcal{H}(\mathbf{Q}, \mathbf{P}, t)$, достаточно найти решение $S(\mathbf{q},\mathbf{P}, t)$ уравнения\\
+$H(\mathbf{q},\frac{\partial S}{\partial \mathbf{q}}, t) + \frac{\partial S}{\partial t} = \mathcal{H}(\frac{\partial S}{\partial \mathbf{P}}, \mathbf{P}, t)$, со свойствомом $\det \frac{\partial^2 S}{\partial \mathbf{q} \partial \mathbf{P}} \neq 0$\\
+\textit{Метод Якоби интегрирования уравнений Гамильтона}\\
+Рассмотрим уравнение $\left \lbrace
+\begin{matrix}
+\dot{\mathbf{q}} &= \frac{\partial H}{\partial \mathbf{p}}\\
+\dot{\mathbf{p}} &= -\frac{\partial H}{\partial \mathbf{q}}
+\end{matrix}
+\right.(5)
+$, $H = H(\mathbf{p}, \mathbf{q}, t)$, $\mathbf{q},\mathbf{p} \in \mathbb{R}^n.$\\
+Соответствующим уравнением Гамильтона-Якоби называется уравнение в частных производных $H(\mathbf{q},\frac{\partial S}{\partial \mathbf{q}}, t) + \frac{\partial S}{\partial t} = 0$	(6)\\
+Семейство решений $S(\mathbf{q},\mathbf{P}, t)$, зависящее от $n$ параметров $\mathbf{P} \in \mathbb{R}^n$, удовлетворяющее условию нвырожденности $\det \frac{\partial^2 S}{\partial \mathbf{q} \partial \mathbf{P}} \neq 0 (7)$ называется его полным интегралом.
+\begin{theorem}Якоби. Если $S(\mathbf{q},\mathbf{P}, t)$ - полный интеграл уравнения Гамильтона-Якоби системы (5), то общее решение системы (5) получается из уравнения $\left \lbrace \begin{matrix}
+\mathbf{P} &= \frac{\partial S(\mathbf{q},\mathbf{P_0}, t)}{\partial \mathbf{q}}\\
+\mathbf{Q_0} &= \frac{\partial S(\mathbf{q},\mathbf{P_0}, t)}{\partial \mathbf{P_0}}
+\end{matrix}
+\right . (8)
+$, где $\mathbf{Q_0} \in \mathbb{R}^n, \mathbf{P_0} \in \mathbb{R}^n$ - произвольные постоянные. \hyperlink {lects.33}{Доказательство в конце страницы}
+\end{theorem}
+\textit{Замечание.} Эта теорема - частный случай более общей теоремы из теории уравнений в частных производных первого порядка. В терминах этой общей теории систеа (5) - это уравнения характеристик для уравнения (6).\\
+Метод Якоби - это описанный алгоритм получения решения (11)(из Док-ва) в неявном виде (8). Главная его проблема - нахождение полного интеграла уравнения (6). Приведем список простейших случаев, когда решение этой проблемы можно облегчить.\\
+\hyperlink {lects.34}{С середины страницы идёт 4 пункта} \\
+\hyperlink {lects.35}{Пункты про отделение переменных} \\
     
     \section{Теорема Лиувилля об интегрировании в квадратурах системы уравнений Гамильтона.}
      \label{21}
