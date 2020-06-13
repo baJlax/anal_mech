@@ -246,8 +246,30 @@
     
     \section{Энергия ускорений. Псевдоскорости. Уравнения Аппеля.}
      \label{4}
-   	\hyperlink {first_lects.19}{Лекции} \\
-   	
+   	\hyperlink {first_lects.19}{Лекции}
+    \begin{defn} {\it Энергия ускорений:}
+    $$
+    S = \frac{1}{2}\langle M\bfrdd,\bfrdd\rangle = S(\bfrdd),\,\,\, \frac{\partial S}{\partial\bfrdd} = \bfrdd^T M
+    $$
+    \end{defn}
+    \begin{defn} {\it Псевдоскорости:}
+    $$
+    \bfomega:\,\, \bfqd = U\bfomega + \bfqd_{\text{чн}},
+    $$
+    где $\bfqd_{\text{чн}}$ -- частное решение $\mathcal{A}\bfqd+\bfalpha = \bfzero$,\ \ 
+    $U = (\bfu_j)_{j=1}^{n-k_1}$.\\ Здесь $\dim\Ker(\mathcal{A}) = n-k_1$ -- {\it число степеней свободы}.
+    \end{defn}
+    \noindent\hyperlink{first_lects.19}{Подробнее о псевдоскоростях}
+    \begin{state} (\hyperlink{first_lects.20}{Уравнение Аппеля})\\
+    Сделаем замену $\bfqd = U\bfomega+\bfqd_{\text{чн}} = \bfqd(t,\bfq,\bfomega)$.\\
+    $\frac{\partial S}{\partial \dot{\omega}} = \frac{\partial S}{\partial\bfqdd}U$
+    \ \ (\hyperlink{first_lects.20}{подробнее об этом в начале страницы})
+    $$
+    \frac{\partial S}{\partial \dot{\omega}} = \bfQ^T U,\,\,\, \bfqd = U\omega + \bfqd_{\text{чн}}
+    $$
+    \end{state}
+    \noindent\hyperlink{first_lects.20}{\bf Пример.}
+    
     \section{Теоремы об изменении импульса, кинетического момента и кинетической энергии для систем со связями и следствия из них.}
     \label{5}
     \hyperlink {first_lects.22}{Лекции} \\
