@@ -25,6 +25,7 @@
 \newtheorem{theorem}{Теорема}[section]
 \newtheorem{lemma}{Лемма}[section]
 \newtheorem{axiom}{Аксиома}[section]
+\newtheorem{consequence}{Следствие}[section]
 
 \definecolor{linkcolor}{HTML}{0000FF}
 \definecolor{urlcolor}{HTML}{0000FF}
@@ -272,7 +273,59 @@
     
     \section{Теоремы об изменении импульса, кинетического момента и кинетической энергии для систем со связями и следствия из них.}
     \label{5}
-    \hyperlink {first_lects.22}{Лекции} \\
+    \hyperlink {first_lects.22}{Лекции}
+    \begin{theorem} (\hyperlink{first_lects.22}{Об изменении импульса})\\
+    $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
+    связями $A\bfrd+\bfa=\bfzero$, и $\forall t\in\mathbb{R}$ связи допускают сдвиг всей
+    системы как твердого тела в направлении $\bfe\in\mathbb{R}^3,\, \bfe = \const, \|\bfe\| = 1$. Тогда $\forall t\in\mathbb{R}$:
+    $$
+    \frac{d}{dt}\langle\bfP,\bfe\rangle|_{\bfrd=\bfrd(t)} = \sum_{i=1}^{N}\langle\bfF_i^{(e)},\bfe\rangle|_{\bfr=\bfr(t),\bfrd=\bfrd(t)}
+    $$
+    \end{theorem}
+    
+    \begin{consequence} (\hyperlink{first_lects.23}{Закон сохранения импульса})\\
+    Пусть $\sum\limits_{i=1}^N\langle\bfF_i^{(e)},\bfe\rangle = 0$ как $(t,\bfr,\bfrd)$, и
+    $\forall (t, \bfr)$ связи допускают сдвиг всей системы как твердого тела в направлении
+    $\bfe\in\mathbb{R}^3,\, \bfe = \const, \|\bfe\| = 1$. Тогда $\forall \bfr=\bfr(t) \,\text{-- движения},\,\forall t\in\mathbb{R}$:
+    $$
+    \langle\bfP,\bfe\rangle|_{\bfrd=\bfrd(t)} = \const.
+    $$
+    \end{consequence}
+    
+    \begin{theorem} (\hyperlink{first_lects.24}{Об изменении кинетического момента})\\
+    $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
+    связями $A\bfrd+\bfa=\bfzero$, и $\forall t\in\mathbb{R}$ связи допускают поворот всей
+    системы как твердого тела вокруг оси $O\bfe,\, \bfe\in\mathbb{R}^3,\, \bfe = \const, \|\bfe\| = 1$. Тогда $\forall t\in\mathbb{R}$:
+    $$
+    \frac{d}{dt}\langle\bfK_0,\bfe\rangle|_{\bfr=\bfr(t),\bfrd=\bfrd(t)} = \langle\bfM_0^{(e)},\bfe\rangle|_{\bfr=\bfr(t),\bfrd=\bfrd(t)}
+    $$
+    \end{theorem}
+    
+    \begin{consequence} (\hyperlink{first_lects.24}{Закон сохранения кинетического момента})\\
+    Пусть $\langle\bfM_0^{(e)},\bfe\rangle = 0$ как $(t,\bfr,\bfrd)$, и
+    $\forall (t, \bfr)$ связи допускают поворот всей системы как твердого тела вокруг оси
+    $O\bfe,\, \bfe\in\mathbb{R}^3,\, \bfe = \const, \|\bfe\| = 1$. Тогда $\forall \bfr=\bfr(t) \,\text{-- движения},\,\forall t\in\mathbb{R}$:
+    $$
+    \langle\bfK_0,\bfe\rangle|_{\bfr=\bfr(t),\bfrd=\bfrd(t)} = \const.
+    $$
+    \end{consequence}
+    
+    \begin{theorem} (\hyperlink{first_lects.25}{Об изменении кинетической энергии})\\
+    $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
+    связями $A\bfrd+\bfa=\bfzero$, и $\forall t\in\mathbb{R}:\,\, \bfrd(t)\in\Ker(A)|_{\bfr=\bfr(t)}$. Тогда:
+    $$
+    \frac{d}{dt}T|_{\bfrd=\bfrd(t)} = \langle\bfF,\bfrd\rangle|_{\bfr=\bfr(t),\bfrd=\bfrd(t)}
+    $$
+    \end{theorem}
+    
+    \begin{consequence} (\hyperlink{first_lects.26}{Закон сохранения энергии})\\
+    $\bfr=\bfr(t)$ -- движение $(m_i, \bfr_i)_{i=1}^N$ под действием $\bfF$ со
+    связями $A\bfrd+\bfa=\bfzero$, $V=V(\bfr),\, \bfF=-\frac{\partial V^T}{\partial\bfr}$,
+    и $\forall t\in\mathbb{R}:\, \bfrd(t)\in\Ker(A)|_{\bfr=\bfr(t)}$. Тогда $\forall t\in\mathbb{R}$:
+    $$
+    (T+V)|_{\bfr=\bfr(t),\bfrd=\bfrd(t)} = \const
+    $$
+    \end{consequence}
     
     \section{Эквивалентность принципа Даламбера – Лагранжа и уравнений движения свободного твердого тела.}
      \label{6}
