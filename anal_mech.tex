@@ -45,6 +45,10 @@
 \def\bfrdd{\ddot{\bfr}}
 \def\bfqd{\dot{\bfq}}
 \def\bfqdd{\ddot{\bfq}}
+\def\bfxd{\dot{\bfx}}
+\def\bfxdd{\ddot{\bfx}}
+\def\bfyd{\dot{\bfy}}
+\def\bfydd{\ddot{\bfy}}
 
 \def\bfalpha{\upalpha}
 \def\bfbeta{\upbeta}
@@ -936,6 +940,31 @@ $, где $\mathbf{Q_0} \in \mathbb{R}^n, \mathbf{P_0} \in \mathbb{R}^n$ - пр�
     \section{Метод усреднения для систем Гамильтона в стандартной форме. Математический маятник с точкой подвеса, движущейся по эллипсу.}
      \label{26}
     \hyperlink {lects.47}{Лекции (сразу над формулами)} \\
+    Периодическая система в стандартной форме:
+    $$
+    \bfxd = \varepsilon\bff(t,\bfx,\varepsilon),\,\, \bff(t+T,\bfx,\varepsilon)=\bff(t,\bfx,\varepsilon),\,\,0\le\varepsilon\ll1.
+    $$
+    {\bf Метод усреднения} состоит в замене этой системы на осредненную систему первого
+    приближения:
+    $$
+    \bfyd = \varepsilon\overline{\bff_0}(\bfy),\,\,\overline{\bff_0}(\bfy)=\frac{1}{T}
+    \int\limits_0^T \bff(\bfy,t,0)dt
+    $$
+    Тут необходимо доказательство существования периодической по $t$ близкой к тождественной замены
+    неизвестных $\bfx = \bfy + \varepsilon\bfy_1(\bfy,t,\varepsilon)$, приводящей к виду
+    $\bfyd = \varepsilon\overline{\bff_0}(\bfy) + O(\varepsilon^2)$. В системе Гамильтона
+    такое преобразование всегда можно построить с помощью производящей функции.
+    \hyperlink{lects.47}{Доказательство (внизу страницы).}
+    \begin{example} (\hyperlink{lects.49}{Математический маятник с подвижной точкой подвеса})\\
+    \begin{center}
+    \includegraphics[scale=0.35]{pics/26}
+    \end{center}
+    Осредненная система первого приближения имеет функцию Гамильтона
+    $$
+    \overline{\mathcal{H}}(\Phi,P) = \varepsilon\left(\frac{1}{2}P^2 + \frac{1}{8}(a^2-b^2)\cos2\Phi - \cos\Phi\right) = \overline{T} + \overline{V}.
+    $$
+    \hyperlink{lects.49}{Вывод.}
+    \end{example}
     
     \includepdf[pages=-, link, linkname = first_lects]{first_lections.pdf}
     \includepdf[pages=-, link, linkname = lects]{Mekhanika_Dist.pdf}
