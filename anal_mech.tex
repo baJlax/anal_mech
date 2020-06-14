@@ -593,18 +593,18 @@
      	$$
      	при условии
      	$$
-     		det \frac{\partial^2 L}{\partial \dot{\bfq}^2} \ne 0
+     		\det \left(\frac{\partial^2 L}{\partial \dot{\bfq}^2}\right) \ne 0
      	$$
      	уравнение Лагранжа можем переписать в виде системы уравнений первого порядка
      	$$
      		\left\{
      			\begin{array}{l}
      				\dot{\bfq} = \bfnu \\
-     				\frac{d}{dt}\left( \frac{\partial L}{\partial \bfnu} \right) - \frac{\partial L}{\bfq} = 0 \\
+     				\frac{d}{dt}\left( \frac{\partial L}{\partial \bfnu} \right) - \frac{\partial L}{\partial\bfq} = 0 \\
      			\end{array}
      		\right. \ \ \ \ \ \ \ \ \ \ (*)
      	$$
-     	где $L = L(\bfnu, \bfq, t)$. Далее в фазовом пространстве $(\bfq,\bfnu)$ вводим координаты $(\bfq,\bfp)$, приняв $\bfp = \frac{\partial L}{\partial \bfnu}$. Тогда неравенство $det \frac{\partial^2 L}{\partial \dot{\bfq}^2} \ne 0$ позволяет воспользоваться теоремой о неявной функции и выразить 
+     	где $L = L(\bfnu, \bfq, t)$. Далее в фазовом пространстве $(\bfq,\bfnu)$ вводим координаты $(\bfq,\bfp)$, приняв $\bfp = \frac{\partial L}{\partial \bfnu}$. Тогда неравенство $\det \left(\frac{\partial^2 L}{\partial \dot{\bfq}^2}\right) \ne 0$ позволяет воспользоваться теоремой о неявной функции и выразить 
      	$$
      		\bfnu = \bfphi (\bfq, \bfp, t), \ \ \ \ \ \ \ \bfp = \frac{\partial L}{\partial \bfnu}
      	$$
@@ -632,7 +632,7 @@
      		\hyperlink {lects.15}{(5)} Система (*) после замены $\bfnu = \bfphi (\bfq, \bfp, t), \ \bfp = \frac{\partial L}{\partial \bfnu}$ примет вид системы уравнений Гамильтона.
      	\end{state}
      	
-     	Для уравнений механики $L = T_2 + T_1 + T_0 - V = \frac{1}{2}\dot{\bfq}^T A \dot{\bfq} + \textbf{a}^T \dot{\bfq} + T_0 - V$ имеем $\frac{\partial^2 L}{\partial \bfnu^2} = A(\bfq, t), \ det \frac{\partial^2 L}{\partial \dot{\bfq}^2} > 0$. Тогда замена 
+     	Для уравнений механики $L = T_2 + T_1 + T_0 - V = \frac{1}{2}\dot{\bfq}^T A \dot{\bfq} + \textbf{a}^T \dot{\bfq} + T_0 - V$ имеем $\frac{\partial^2 L}{\partial \bfnu^2} = A(\bfq, t), \ \det \left(\frac{\partial^2 L}{\partial \dot{\bfq}^2}\right) > 0$. Тогда замена 
      	$$
      		\bfnu = \bfphi (\bfq, \bfp, t), \ \ \ \ \ \ \ \bfp = \frac{\partial L}{\partial \bfnu}
      	$$
