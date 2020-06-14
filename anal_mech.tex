@@ -51,6 +51,7 @@
 \def\bfphi{\upphi}
 \def\bfomega{\mathbf{\omega}}
 \def\bfrho{\mathbf{\rho}}
+\def\bfnu{\upnu}
 
 \def\bfzero{\mathbf{0}}
 %----------------------------------------------------------------------------------
@@ -581,9 +582,73 @@
     
     \section{Преобразование уравнений Лагранжа в уравнения Гамильтона. Обобщенные импульсы. Явный вид функции Гамильтона для уравнений механики.}
      \label{13}
-     \hyperlink {lects.16}{Лекции} \\
-    
-        
+     \hyperlink {lects.15}{Лекции} \\
+     	Пусть есть уравнение Лагранжа и функция Лагранжа
+     	$$
+     		\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\bfq}} \right) - \frac{\partial L}{\bfq} = 0, \ \ \ \bfq \in \mathbb{R}^n, \ \ \ L=L(\dot{\bfq},\bfq,t)
+     	$$
+     	при условии
+     	$$
+     		det \frac{\partial^2 L}{\partial \dot{\bfq}^2} \ne 0
+     	$$
+     	уравнение Лагранжа можем переписать в виде системы уравнений первого порядка
+     	$$
+     		\left\{
+     			\begin{array}{l}
+     				\dot{\bfq} = \bfnu \\
+     				\frac{d}{dt}\left( \frac{\partial L}{\partial \bfnu} \right) - \frac{\partial L}{\bfq} = 0 \\
+     			\end{array}
+     		\right. \ \ \ \ \ \ \ \ \ \ (*)
+     	$$
+     	где $L = L(\bfnu, \bfq, t)$. Далее в фазовом пространстве $(\bfq,\bfnu)$ вводим координаты $(\bfq,\bfp)$, приняв $\bfp = \frac{\partial L}{\partial \bfnu}$. Тогда неравенство $det \frac{\partial^2 L}{\partial \dot{\bfq}^2} \ne 0$ позволяет воспользоваться теоремой о неявной функции и выразить 
+     	$$
+     		\bfnu = \bfphi (\bfq, \bfp, t), \ \ \ \ \ \ \ \bfp = \frac{\partial L}{\partial \bfnu}
+     	$$
+     	\begin{defn}
+     		Величины $p_i$ называют \textbf{обобщенными импульсами}.
+     	\end{defn}
+     	
+     	\bigskip
+     	\textbf {\hyperlink {lects.15}{Функция Гамильтона (4)}}
+     	$$
+     		H = \left. \left( \frac{\partial L}{\partial \bfnu} \bfnu - L \right) \right|_{\bfnu = \bfphi (\bfq, \bfp, t)} = H(\bfq,\bfp,t)
+     	$$
+     	
+     	\bigskip
+     	\textbf {\hyperlink {lects.15}{Уравнения Гамильтона (5)} \\}
+     	$$
+     		\left\{
+     			\begin{array}{l}
+     				\dot{\bfq} = \frac{\partial H}{\partial \bfp} \\
+     				\dot{\bfp} = -\frac{\partial H}{\partial \bfq}
+     			\end{array}
+     		\right.
+     	$$
+     	\begin{state} 
+     		\hyperlink {lects.15}{(5)} Система (*) после замены $\bfnu = \bfphi (\bfq, \bfp, t), \ \bfp = \frac{\partial L}{\partial \bfnu}$ примет вид системы уравнений Гамильтона.
+     	\end{state}
+     	
+     	Для уравнений механики $L = T_2 + T_1 + T_0 - V = \frac{1}{2}\dot{\bfq}^T A \dot{\bfq} + \textbf{a}^T \dot{\bfq} + T_0 - V$ имеем $\frac{\partial^2 L}{\partial \bfnu^2} = A(\bfq, t), \ det \frac{\partial^2 L}{\partial \dot{\bfq}^2} > 0$. Тогда замена 
+     	$$
+     		\bfnu = \bfphi (\bfq, \bfp, t), \ \ \ \ \ \ \ \bfp = \frac{\partial L}{\partial \bfnu}
+     	$$
+     	примет вид 
+     	$$
+     	\bfnu = \bfphi (\bfq, \bfp, t) = A^{-1} (\bfp - \textbf{a}), \ \ \ \ \ \ \bfp - A \bfnu + \textbf{a}
+     	$$
+     	Поэтому для уравнений механики функция Гамильтона может быть записана явно \hyperlink {lects.16}{(перед примерами)}
+     	$$
+     		H = \left. (T_2 - T_0 + V) \right|_{\bfnu = \bfphi (\bfq, \bfp, t)} = \frac{1}{2}(\bfp - \textbf{a})^T A^{-1} (\bfp - \textbf{a}) - T_0 + V
+     	$$
+     	
+     	\textbf{Примеры}
+     	\begin{itemize}
+     		\item Функция Гамильтона для свободной точки в поле сил потенциальной энергии в декартовых координатах \hyperlink {lects.16}{(1а)}
+     		\item Функция Гамильтона для свободной точки в поле сил потенциальной энергии в сферических координатах \hyperlink {lects.16}{(1б)}
+     		\item Функция Гамильтона для точки на вращающейся по заданному закону окружности \hyperlink {lects.16}{(2)}
+     		\item Функция Гамильтона для обруча и точки на нем \hyperlink {lects.16}{(3)}
+     	\end{itemize}
+     	
     \section{Первые интегралы уравнений Гамильтона. Скобки Пуассона в канонических координатах. Свойства скобок Пуассона, тождество Якоби. Простейшие первые интегралы в случаях независимости функции Гамильтона от времени, наличия циклических координат, отделения переменных.}
      \label{14}
     \hyperlink {lects.18}{Лекции} \\
