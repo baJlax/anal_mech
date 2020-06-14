@@ -655,7 +655,59 @@
      	
     \section{Первые интегралы уравнений Гамильтона. Скобки Пуассона в канонических координатах. Свойства скобок Пуассона, тождество Якоби. Простейшие первые интегралы в случаях независимости функции Гамильтона от времени, наличия циклических координат, отделения переменных.}
      \label{14}
-    \hyperlink {lects.18}{Лекции} \\
+    \hyperlink {lects.17}{Лекции} \\
+    \textbf{Первый интеграл} системы Гамильтона 
+    $$
+    \left\{
+    \begin{array}{l}
+    \dot{\bfq} = \frac{\partial H}{\partial \bfp} \\
+    \dot{\bfp} = -\frac{\partial H}{\partial \bfq}
+    \end{array}
+    \right. \ \ \ \ \ \bfq, \bfp \in \mathbb{R}^n
+    $$
+    это такая функция $f(\bfq,\bfp,t)$, которая на любом решении этой системы $(\bfq,\bfp)$ тождественно равна константе, т.е. 
+    $$
+    	\frac{d}{dt} f(\bfq (t),\bfp (t),t) \equiv 0
+    $$
+    это выражение может быть переписано в виде \hyperlink {lects.17}{(ниже 9)}
+    $$
+    	\frac{\partial f}{\partial \bfq}^T \frac{\partial H}{\partial \bfp} - \frac{\partial f}{\partial \bfp}^T \frac{\partial H}{\partial \bfq} + \frac{\partial f}{\partial t} = 0
+    $$
+    или 
+    $$
+    	\{f,H\} + \frac{\partial f}{\partial t} = 0
+    $$
+    где $\{\cdot, \cdot\}$ - скобка Пуассона.
+    \begin{defn}
+    	\hyperlink {lects.17}{(конец страницы)} \textbf{Скобка Пуассона} функций $F(\bfq, \bfp, t)$ и $G(\bfq, \bfp, t)$ - это функция
+    	$$
+    		\Phi (\bfq, \bfp, t) = \{F,G\} = \frac{\partial F}{\partial \bfq}^T \frac{\partial G}{\partial \bfp} + \frac{\partial F}{\partial \bfp}^T \frac{\partial G}{\partial \bfq}
+    	$$ 
+    \end{defn}
+	\textbf{Свойства скобки Пуассона}
+	\begin{itemize}
+		\item $\{F,G\} = - \{G,F\}$
+		\item $\{\alpha_1 F_1 + \alpha_2 F_2, G\} = \alpha_1 \{F_1, G\} + \alpha_2 \{F_2, G\}, \ \ \alpha_i = const$
+		\item Если $F = E(\phi_1(\bfq, \bfp, t), ..., \phi_n(\bfq, \bfp, t))$, то
+			$$
+				\{F,G\} = \sum\limits_{i = 1}^n \frac{\partial E}{\partial \phi_i} \{\phi_i, G\}
+			$$
+		\item \hyperlink {lects.18}{Тождество Якоби}
+			$$
+				\{F, \{G, H\} \} + \{G, \{H, F\} \} + \{H, \{F, G\} \} \equiv 0
+			$$
+	\end{itemize}  
+
+	\textbf{\hyperlink {lects.19}{Простейшие первые интегралы уравнений Гамильтона}}
+	\begin{itemize}
+		\item Если $\frac{\partial H}{\partial t} = 0$, то $H$ - первый интеграл. (сама функция Гамильтона) \\
+			В механических задачах это либо интеграл Якоби $T_2 + T_0 -V$ либо энергии $T+V$.
+		\item Пусть $\bfq = (\bar{\bfq}, \tilde {\bfq})$ и $\frac{\partial H}{\partial \bar{\bfq}} \equiv 0$, тогда $\bar {\bfp}$ - циклические интегралы 	(являются первыми интегралами), а $\bar{\bfq}$ - циклические переменные. 
+		\item Если $H = H(f(\bar{\bfq}, \bar{\bfp}), \tilde{\bfq}, \tilde{\bfp},t)$, т.е. пары координат $(\bar{\bfq}, \bar{\bfp})$ отделяются в гамильтониане в виде некоторой функции, то эта функция $f(\bar{\bfq}, \bar{\bfp})$ - первый интеграл.
+	\end{itemize}
+	\textbf {\hyperlink {lects.19}{Примеры первых интегралов}}
+    
+    
     
     \section{Аналог теоремы Нетер для уравнений Гамильтона. Теорема о скобке Пуассона двух первых интегралов. Скобки Пуассона компонент кинетического момента свободной точки.}
      \label{15}
