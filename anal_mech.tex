@@ -515,7 +515,7 @@
     	\textbf{\hyperlink {lects.10}{Устойчивость равновесий по Ляпунову (5)}} \\
     	В фазовом пространстве $(\bfq,\dot{\bfq})$ для $a>0$ обозначим $C_a$ множество $|\dot{\bfq}| <a, \ |\bfq-\bfq_*| < a$, где под $|\textbf{f}|$ понимается $|f_i| < a, \ i = 1,2,...,n$.
     	\begin{defn}
-    		Равновесие системы с функцией Лагранжа $L = \frac{1}{2}\dot{\bfq}^T A(\bfq) \dot{\bfq} - V(\bfq)$ называется \textbf{устойчивым по Ляпунову}, если $\forall \ \varepsilon > 0 \ \exists \ \delta > 0 : \ \forall \ \bfq(t)$ - решения системы $\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\bfq}} \right) - \frac{\partial L}{\bfq} = 0$ с начальным условием $(\bfq_0, \dot{\bfq}_0)\in C_{\delta}$ при $t = 0$ для всех $t > 0$ верно $(\bfq(t), \dot{\bfq}(t)) \in C_{\varepsilon}$.
+    		Равновесие системы с функцией Лагранжа $L = \frac{1}{2}\dot{\bfq}^T A(\bfq) \dot{\bfq} - V(\bfq)$ называется \textbf{устойчивым по Ляпунову}, если $\forall \ \varepsilon > 0 \ \exists \ \delta > 0 : \ \forall \ \bfq(t)$ - решения системы $\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\bfq}} \right) - \frac{\partial L}{\partial\bfq} = 0$ с начальным условием $(\bfq_0, \dot{\bfq}_0)\in C_{\delta}$ при $t = 0$ для всех $t > 0$ верно $(\bfq(t), \dot{\bfq}(t)) \in C_{\varepsilon}$.
     	\end{defn}  
     
     	\begin{theorem}
@@ -533,7 +533,7 @@
     $$
     и подставляем в уравнение Лагранжа
     $$
-    	\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\bfq}} \right) - \frac{\partial L}{\bfq} = 0
+    	\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\bfq}} \right) - \frac{\partial L}{\partial\bfq} = 0
     $$
     получаем 
     $$
@@ -589,7 +589,7 @@
      \hyperlink {lects.15}{Лекции} \\
      	Пусть есть уравнение Лагранжа и функция Лагранжа
      	$$
-     		\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\bfq}} \right) - \frac{\partial L}{\bfq} = 0, \ \ \ \bfq \in \mathbb{R}^n, \ \ \ L=L(\dot{\bfq},\bfq,t)
+     		\frac{d}{dt}\left( \frac{\partial L}{\partial \dot{\bfq}} \right) - \frac{\partial L}{\partial\bfq} = 0, \ \ \ \bfq \in \mathbb{R}^n, \ \ \ L=L(\dot{\bfq},\bfq,t)
      	$$
      	при условии
      	$$
