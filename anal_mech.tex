@@ -437,7 +437,7 @@
     \end{defn}
     
     \begin{defn} 
-    { \it Функцией Рауса} системы с функцией Лагранжа $L=L(\dot{\bfq}, \widetilde{\bfq}, t)$ называется $R(\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc) = (L - \frac{\partial L^T}{\partial \dot{\overline{\bfq}}} \dot{\overline{\bfq}})_{*} - L|_{*} - \bfc^T\overline{\phi}(\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc)$, где (*) означает подстановку $\dot{\overline{\bfq}} = \overline{\phi} (\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc)$
+    { \it Функцией Рауса} системы с функцией Лагранжа $L=L(\dot{\bfq}, \widetilde{\bfq}, t)$ называется $R(\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc) = (L - \frac{\partial L^T}{\partial \dot{\overline{\bfq}}} \dot{\overline{\bfq}})_{*} = L|_{*} - \bfc^T\overline{\phi}(\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc)$, где (*) означает подстановку $\dot{\overline{\bfq}} = \overline{\phi} (\dot{\widetilde{\bfq}}, \widetilde{\bfq}, t, \bfc)$
     \end{defn}
     
     \begin{theorem}(\hyperlink {lects.4}{Теорема Рауса})\\
@@ -862,7 +862,7 @@ $$
 J = \frac{\partial \mathbf{\zeta_0}}{\partial \mathbf{z}} (4)$\\
 \begin{enumerate}
 \item {Преобразование (4) каноническое тогда и только тогда, \\когда $J^\top IJ \equiv I$. \hyperlink {lects.25}{Док-во в конце страницы}}
-\item {Преобразование (4) каноническое тогда и только тогда, когда тождественно равна нулю 2-форма $\sum dp_i \wedge dq_i - \sum \delta P_{\ddot a} \wedge \delta Q_{\ddot a} \equiv 0$ или $d\mathbf{p} \wedge d \mathbf{q} - \delta \mathbf{P}_0^\top\wedge \delta \mathbf{Q}_0 \equiv 0$ (7).\\
+\item {Преобразование (4) каноническое тогда и только тогда, когда тождественно равна нулю 2-форма $\sum dp_i \wedge dq_i - \sum \delta P_{0 i} \wedge \delta Q_{0 i} \equiv 0$ или $d\mathbf{p} \wedge d \mathbf{q} - \delta \mathbf{P}_0^\top\wedge \delta \mathbf{Q}_0 \equiv 0$ (7).\\
 Можно выразить $\delta \mathbf{P}_0^\top\wedge \delta \mathbf{Q}_0 \equiv -\frac{1}{2}\delta \mathbf{\zeta_0}^\top \wedge \delta\mathbf{\zeta_0}$. \hyperlink {lects.26}{Док-во в начале}}\\
 \emph{Лемма Пуанкаре} Для 1-формы $\omega$ тождество $\delta \omega \equiv 0$ верно тогда и только тогда, когда существует такая функция $f(\mathbf{z}, t)$, что $\omega \equiv \delta f$.
 \item -//-, если существует такая функция $\Pi(\mathbf{z}, t)$, что\\ $\mathbf{p} \wedge d \mathbf{q} - \mathbf{P}_0^\top\wedge \delta \mathbf{Q}_0 \equiv \delta \Pi(\mathbf{z}, t)$\hyperlink {lects.27}{Док-во в начале}
